@@ -1,0 +1,28 @@
+{
+  "name": "inkboard",
+  "version": "1.0.0",
+  "description": "A Miro-style infinite whiteboard for Windows",
+  "main": "main.js",
+  "author": "You",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis portable"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.0.0"
+  },
+  "build": {
+    "appId": "com.example.inkboard",
+    "productName": "Inkboard",
+    "files": ["index.html", "main.js", "package.json"],
+    "win": {
+      "target": ["nsis", "portable"]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}
